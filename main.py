@@ -46,15 +46,13 @@ def sendMessagesToAll(title, message):
 
 if __name__ == '__main__':
     print("started")
-    while (True):
-        time.sleep(60)
-        date_now = datetime.now()
-        hour = date_now.hour
-        minute = date_now.minute
-        print(hour,minute)
-        if ((hour == 9 or hour == 12) and minute == 00):
-            title_random = random.randint(0, len(titles) - 1)
-            message_random = random.randint(0, len(messages) - 1)
-            sendMessagesToAll(title=titles[title_random], message=messages[message_random])
+    date_now = datetime.now()
+    hour = date_now.hour
+    minute = date_now.minute
+    print(hour, minute)
+    if ((hour == 9 or hour == 12) and minute == 00):
+        title_random = random.randint(0, len(titles) - 1)
+        message_random = random.randint(0, len(messages) - 1)
+        sendMessagesToAll(title=titles[title_random], message=messages[message_random])
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
