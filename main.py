@@ -45,6 +45,7 @@ def sendMessagesToAll(title, message):
 # Press the green button in the gutter to run the script.
 
 if __name__ == '__main__':
+    print("started")
     while (True):
         time.sleep(60)
         date_now = datetime.now()
